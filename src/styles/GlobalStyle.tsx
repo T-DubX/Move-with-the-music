@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./theme";
+import {SectionTitle} from "../components/sectionTitle/SectionTitle";
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -31,4 +32,15 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  section:nth-of-type(odd) {
+    ${SectionTitle} {
+      text-align: start;
+    }
+  }
+
+  section:nth-of-type(even) {
+    ${SectionTitle} {
+      text-align: center;
+    }
+  }
 `

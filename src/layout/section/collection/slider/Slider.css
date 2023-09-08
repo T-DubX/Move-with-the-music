@@ -1,0 +1,34 @@
+
+
+.alice-carousel__dots {
+    display: none;
+}
+
+.alice-carousel__stage {
+    text-align: center;
+}
+
+.alice-carousel__prev-btn-wrapper {
+    position: absolute;
+    left: -60px;
+    top: 45%;
+    transform: translateY(-50%);
+
+}
+
+.alice-carousel__prev-btn-wrapper span::after {
+    color: #000;
+    font-size: 60px;
+}
+
+.alice-carousel__next-btn-wrapper {
+    position: absolute;
+    right: -60px;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.alice-carousel__next-btn-wrapper span::after {
+    color: #000;
+    font-size: 60px;
+}
