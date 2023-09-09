@@ -3,7 +3,7 @@ import { S } from './Main_Styles';
 import {Container} from "../../../components/Container";
 import mainImg from '../../../assets/images/main-img.png'
 import {FlexWrapper} from "../../../components/FlexWrapper";
-export const Main = () => {
+export const Main:React.FC = () => {
     return (
         <S.Main>
             <Container>
