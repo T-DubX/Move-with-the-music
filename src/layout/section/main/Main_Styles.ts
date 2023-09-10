@@ -2,10 +2,26 @@ import styled from "styled-components";
 import mainBg from '../../../assets/images/main-bg.svg'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../styles/theme";
+import {font} from "../../../styles/Common";
+import {Container} from "../../../components/Container";
 
 const Main = styled.section`
   background: linear-gradient(75deg, #FF9292 -7.33%, #DE5150 90.21%);
   padding: 158px 0 144px;
+  
+ 
+  
+  @media ${theme.media.tablet} {
+    ${Container} ${FlexWrapper}:first-child {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px
+    }
+  }
+  
+  @media ${theme.media.mobile} {
+    padding: 150px 0 100px;
+  }
   
 `
 // left main
@@ -17,57 +33,76 @@ const MainImgWrapper = styled.div`
     background-image: url(${mainBg});
     background-repeat: no-repeat;
     background-size: contain;
-    width: 812px;
-    height: 632px;
+    max-width: 812px;
+    min-height: 632px;
     z-index: 1;
     
     
     position: absolute;
     top: -50px;
-    left: -155px;
-    right: 0;
+    left: -150px;
+    right: -80px;
     bottom: 0;
   }
   
   img {
     z-index: 2;
     position: relative;
-    max-width: 517px;
+    max-width: 570px;
+    min-width: 350px;
+    //width: 100%;
+  }
+  
+  @media ${theme.media.desktopMini} {
+    img {
+      width: 100%;
+    }
+  }
+  
+  @media ${theme.media.tablet} {
+    img {
+      max-width: 450px;
+    }
   }
 `
 
 // slogan right main
 
 const SloganWrapper = styled.div`
-  
+  max-width: 517px;
+
+  @media ${theme.media.tablet} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h2:nth-child(2) {
+      text-align: center;
+    }
+  }
 `
 
 const SmallSlogan = styled.h2`
-  color: ${theme.colors.secondary};
-  font-size: 22px;
-  font-weight: 500;
   line-height: 140%; /* 30.8px */
   letter-spacing: 2.2px;
   text-transform: uppercase;
   margin-bottom: 3px;
+  
+  ${font({color: `${theme.colors.secondary}`, weight: 500, Fmax: 22, Fmin: 18})};
 `
 
 const BigSlogan = styled.h2`
-  color: ${theme.colors.secondary};
-  font-size: 99.17px;
-  font-weight: 700;
   line-height: 100%; /* 99.17px */
   text-transform: uppercase;
   margin-bottom: 45px;
+  
+  ${font({color: `${theme.colors.secondary}`, weight: 700, Fmax: 99, Fmin: 60})}
 `
 
 const Discount = styled.span`
-  color: ${theme.colors.secondary};
-
-  /* Subtitle / Base */
-  font-size: 44px;
-  font-weight: 700;
   position: relative;
+  
+  ${font({color: `${theme.colors.secondary}`, weight: 700, Fmax: 44, Fmin: 28})}
 
   &::after {
     content: '';
@@ -88,6 +123,7 @@ const Price = styled.span`
   font-weight: 500;
   line-height: 140%; /* 43.4px */
   text-decoration: line-through;
+  ${font({color: `${theme.colors.secondary}`, weight: 500, Fmax: 31, Fmin: 16})}
   
   opacity: .7;
   
