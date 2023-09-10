@@ -47,7 +47,7 @@ const Email = styled.input`
     opacity: .3;
   }
   &:focus-visible {
-    border: .5px solid ${theme.colors.fontPrimary};
+    outline: 1px solid ${theme.colors.fontPrimary};
   }
 `
 
