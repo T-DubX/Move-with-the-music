@@ -14,7 +14,6 @@ export const Header:React.FC = () => {
                     <Menu/>
                 </FlexWrapper>
             </Container>
-            <div>helo</div>
         </S.Header>
     );
 };
