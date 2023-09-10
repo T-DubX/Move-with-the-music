@@ -22,6 +22,10 @@ export const Collection: React.FC = () => {
 const StyledCollection = styled.section`
   margin: 130px 0 190px;
   
+  ${SectionTitle} {
+    text-align: center;
+  }
+  
   ${Container} {
     display: flex;
     justify-content: center;

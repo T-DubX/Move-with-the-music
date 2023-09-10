@@ -5,6 +5,7 @@ import headphonesBg from "../../../assets/images/headphones-bg.svg";
 import headphonesBefore from "../../../assets/images/headphones-before.svg";
 import headphonesAfter from "../../../assets/images/headphones-after.svg";
 import {theme} from "../../../styles/theme";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const Сharacteristics = styled.section`
   margin-bottom: 130px;
@@ -12,7 +13,15 @@ const Сharacteristics = styled.section`
   ${Container} {
     display: flex;
     gap: 187px;
-    justify-content: space-between;
+    //justify-content: space-between;
+  }
+  
+  @media ${theme.media.desktopMini} {
+    ${Container} {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 50px;
+    }
   }
 `
 
@@ -21,22 +30,30 @@ const Description = styled.div`
       max-width: 460px;
       margin-bottom: 60px;
     }
+  
+  @media ${theme.media.desktopMini} {
+    ${SectionTitle} {
+      text-align: center;
+      margin: 0 auto 60px auto;
+    }
+    
+    ${FlexWrapper} {
+      flex-direction: row;
+    }
+  }
+  
+  @media ${theme.media.tablet} {
+    ${FlexWrapper} {
+      flex-direction: column;
+    }
+  }
+  
 `
 
 const WrapperImg = styled.div`
-  background-image: url(${headphonesBg});
-  background-repeat: no-repeat;
   position: relative;
-  width: 308px;
-  height: 355px;
   
-  div {
-    position: absolute;
-    left: -140px;
-    top: 70px;
-  }
-  
-  div::before {
+  &::before {
     content: '';
     display: inline-block;
     background-image: url(${headphonesBefore});
@@ -46,10 +63,10 @@ const WrapperImg = styled.div`
 
     position: absolute;
     left: -120px;
-    bottom: -55px;
+    bottom: 85px;
   }
 
-  div::after {
+  &::after {
     content: '';
     display: inline-block;
     background-image: url(${headphonesAfter});
@@ -58,9 +75,34 @@ const WrapperImg = styled.div`
     height: 205px;
 
     position: absolute;
-    bottom: -30px;
+    bottom: 114px;
     right: -125px;
   }
+  img {
+    max-width: 332px;
+  }
+
+  @media ${theme.media.desktopMini} {
+    &::before {
+      bottom: -64px;
+    }
+    
+    &::after {
+      bottom: -38px;
+    }
+  }
+
+`
+const Bg = styled.div`
+  position: absolute;
+  left: 158px;
+  top: -60px;
+  background-image: url(${headphonesBg});
+  background-repeat: no-repeat;
+  width: 308px;
+  height: 355px;
+  z-index: -1;
+
 `
 
 // Сharacteristic
@@ -94,10 +136,18 @@ const Characteristic = styled.div`
     }
   }
 
+  @media ${theme.media.desktopMini} {
+    flex-direction: column;
+  }
 `
 
 const CharacteristicDescription = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+
+  @media ${theme.media.desktopMini} {
+    align-items: center;
+  }
 `
 
 const Title = styled.h4`
@@ -139,5 +189,6 @@ export const S = {
     CharacteristicDescription,
     Text,
     Title,
-    Link
+    Link,
+    Bg
 }

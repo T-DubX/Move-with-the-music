@@ -21,9 +21,8 @@ export const Сharacteristics: React.FC = () => {
                     </FlexWrapper>
                 </S.Description>
                 <S.WrapperImg>
-                    <div>
-                        <img src={headphonesImg} alt="headphonesImg"/>
-                    </div>
+                    <img src={headphonesImg} alt="headphonesImg"/>
+                    <S.Bg />
                 </S.WrapperImg>
             </Container>
         </S.Сharacteristics>

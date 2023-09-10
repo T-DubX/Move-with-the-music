@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/Container";
 import subscribeBg from "../../../assets/images/subscribeBg.svg";
 import {theme} from "../../../styles/theme";
+import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 
 const Subscription = styled.section`
   margin-bottom: 130px;
@@ -11,6 +12,10 @@ const Subscription = styled.section`
     justify-content: center;
     background-image: url(${subscribeBg});
     background-repeat: no-repeat;
+  }
+  
+  ${SectionTitle} {
+    text-align: center;
   }
 `
 
