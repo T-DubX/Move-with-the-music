@@ -13,6 +13,7 @@ const Сharacteristics = styled.section`
   ${Container} {
     display: flex;
     gap: 187px;
+    align-items: center;
     //justify-content: space-between;
   }
   
@@ -63,7 +64,7 @@ const WrapperImg = styled.div`
 
     position: absolute;
     left: -120px;
-    bottom: 85px;
+    bottom: -55px;
   }
 
   &::after {
@@ -75,7 +76,7 @@ const WrapperImg = styled.div`
     height: 205px;
 
     position: absolute;
-    bottom: 114px;
+    bottom: -30px;
     right: -125px;
   }
   img {
@@ -89,6 +90,13 @@ const WrapperImg = styled.div`
     
     &::after {
       bottom: -38px;
+    }
+  }
+  
+  @media ${theme.media.mobile} {
+    img {
+      width: 100%;
+      max-width: 250px;
     }
   }
 
