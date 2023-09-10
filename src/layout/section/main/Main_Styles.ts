@@ -32,6 +32,7 @@ const MainImgWrapper = styled.div`
   img {
     z-index: 2;
     position: relative;
+    max-width: 517px;
   }
 `
 

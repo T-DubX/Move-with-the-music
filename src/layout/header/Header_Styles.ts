@@ -44,6 +44,9 @@ const Menu = styled.nav`
     }
   }
   
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `
 
 const MenuItem = styled.li`
