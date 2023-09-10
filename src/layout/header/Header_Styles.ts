@@ -30,6 +30,18 @@ const Menu = styled.nav`
   ul {
     display: flex;
     gap: 64px;
+    
+    li + li::before {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 47px;
+      opacity: 0.5;
+      background-color: ${theme.colors.secondary};
+
+      position: absolute;
+      left: -32px;
+    }
   }
   
 `
@@ -45,6 +57,8 @@ const MenuItem = styled.li`
   align-items: center;
   
   cursor: pointer;
+
+  position: relative;
 `
 
 
