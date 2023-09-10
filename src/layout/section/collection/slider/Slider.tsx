@@ -22,13 +22,16 @@ const responsive = {
 export const Slider:React.FC = () => {
     return (
         <StyledSlider>
-            <AliceCarousel items={items} responsive={responsive} infinite={true} mouseTracking/>
+            <AliceCarousel items={items} responsive={responsive} infinite={true} mouseTracking />
         </StyledSlider>
     );
 };
 const StyledSlider = styled.div`
   max-width: 1000px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 

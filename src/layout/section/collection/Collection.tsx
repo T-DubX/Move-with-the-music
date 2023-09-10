@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {Slider} from "./slider/Slider";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/theme";
 
 export const Collection: React.FC = () => {
     return (
@@ -27,6 +28,10 @@ const StyledCollection = styled.section`
     align-items: center;
     flex-direction: column;
     gap: 70px;
+  }
+  
+  @media ${theme.media.tablet} {
+    margin: 130px 0 120px;
   }
 `
 
