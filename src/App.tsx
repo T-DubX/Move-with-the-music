@@ -5,6 +5,7 @@ import {Сharacteristics} from "./layout/section/characteristics/Сharacteristic
 import {LatestProducts} from "./layout/section/latestProducts/LatestProducts";
 import {HeadphoneСomponents} from "./layout/section/headphoneСomponents/HeadphoneСomponents";
 import {Subscription} from "./layout/section/ subscription/Subscription";
+import {Footer} from "./layout/footer/Footer";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <LatestProducts/>
             <HeadphoneСomponents/>
             <Subscription/>
+            <Footer/>
         </>
     );
 }
